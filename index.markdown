@@ -15,5 +15,3 @@ Her research interests lie broadly in problems motivated by health modeling and 
 
 Ph.D. Operations Research (Expected 2024), Georgia Institute of Technology
 B. E., concentration in Mechanical Engineering (2018), Dartmouth College
-
-## My name is Julie
