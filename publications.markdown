@@ -11,5 +11,4 @@ Examining Marginal Predictive Value in the Prediction of Adverse Fetal/Neonatal 
 
 # Book Chapters
 S. J. Lee, H. Pandey, and G.-G. P. Garcia (2022). Designing Interpretable Machine Learning
-Models Using Mixed Integer Programming. In: Pardalos, P. M., Prokopyev, O. A. (eds.) Ency-
-clopedia of Optimization (In progress)
+Models Using Mixed Integer Programming. In: Pardalos, P. M., Prokopyev, O. A. (eds.) Encyclopedia of Optimization (In progress)
