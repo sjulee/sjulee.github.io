@@ -10,11 +10,6 @@
   position: relative;
 }
 
-.active-page{
-   background-color:red;
-   border-bottom:1px solid white;
-}
-
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
