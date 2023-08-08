@@ -81,9 +81,9 @@ table td { border: 1px solid #e8e8e8; }
 .site-nav .menu-icon { display: none; }
 .site-nav .nav-item .nav-link { color: #111; line-height: 1.5; }
 .site-nav .nav-item .nav-link:not(:last-child) { margin-right: 20px; }
-.site-nav .nav-item .nav-link:hover { color: #e1655e; }
+.site-nav .nav-item .nav-link:hover { color: #111; }
 .site-nav .nav-item.active > .nav-link { background-color: inherit; font-weight: bold; color: #111; }
-.site-nav .nav-item.active > .nav-link:hover { color: #e1655e; }
+.site-nav .nav-item.active > .nav-link:hover { color: #111; text-decoration: none; }
 .site-nav .page-link { color: #111; line-height: 1.5; }
 .site-nav .page-link:not(:last-child) { margin-right: 20px; }
 @media screen and (max-width: 600px) { .site-nav { position: absolute; top: 9px; right: 15px; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 5px; text-align: right; }
