@@ -79,6 +79,8 @@ figcaption {
  */
 ul, ol {
   margin-left: $spacing-unit;
+  display: inline;
+  margin-right: $spacing-unit/2;
 }
 
 li {
@@ -253,6 +255,9 @@ table {
   }
 }
 
+/**
+ * Buttons
+ */
 .btn {
   border: 2px solid #e1655e;
   color: #e1655e;
