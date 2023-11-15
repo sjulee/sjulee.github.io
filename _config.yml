@@ -21,7 +21,7 @@
 title: Sun Ju Lee
 email: julee@gatech.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Operations Research Ph.D. student at Georgia Tech
+  Operations Research Ph.D. Candidate at Georgia Tech
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "sjulee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sjulee
