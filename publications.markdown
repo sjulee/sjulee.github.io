@@ -10,13 +10,18 @@ permalink: /publications/
 <span style="color:gray"> S. J. Lee, G.-G. P. Garcia, M. H. Platner, and S. L. Boulet.<br>
 _American Journal of Obstetrics & Gynecology MFM_, 2023 </span>
 
+ * Modified Monotone Policy Iteration for Interpretable Policies in Markov Decision Processes and the Impact of State Ordering Rules. [Preprint](https://optimization-online.org/2023/07/analysis-of-monotone-policy-iteration-for-interpretable-policies-in-markov-decision-processes-impact-of-state-ordering-rules/){: .btn}\
+<span style="color:gray"> S. J. Lee, X. Gong, and G.-G. P. Garcia.<br>
+_Annals of Operations Research_, 2024 (Accepted on July 10, 2024)</span>
+
 
 # Book Chapters
  * Designing Interpretable Machine Learning Models Using Mixed Integer Programming. [Paper](https://doi.org/10.1007/978-3-030-54621-2_867-1){: .btn} \
 <span style="color:gray"> S. J. Lee, H. S. Pandey, and G.-G. P. Garcia.<br>
 _In: Pardalos, P.M., Prokopyev, O.A. (eds) Encyclopedia of Optimization. Springer, Cham._ </span>
 
-
+<!---
 # Submitted and Working Papers
  * Analysis of Monotone Policy Iteration for Interpretable Policies in Markov Decision Processes: Impact of State Ordering Rules. [Preprint](https://optimization-online.org/2023/07/analysis-of-monotone-policy-iteration-for-interpretable-policies-in-markov-decision-processes-impact-of-state-ordering-rules/){: .btn}\
 <span style="color:gray"> X. Gong, S. J. Lee, and G.-G. P. Garcia. </span>
+-->
