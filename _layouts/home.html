@@ -8,9 +8,15 @@ layout: base
         box-sizing: border-box;
     }
     /* Set additional styling options for the columns*/
-    .column {
+    .columnleft {
     float: left;
-    width: 50%;
+    width: 30%;
+    }
+
+    .columnright {
+    float: right;
+    width: 65%;
+    margin-left: 5%;
     }
 
     .left {
@@ -37,10 +43,10 @@ layout: base
  </head>
 <div class="home">
   <div class="row">
-    <div class="column">
+    <div class="columnleft">
       <img src="/../images/sunjuleewebsize-3636.jpeg" alt="Sun Ju Lee">
     </div>
-    <div class="column">
+    <div class="columnright">
       {%- if page.title -%}
         <h1 class="page-heading">{{ page.title }}</h1>
       {%- endif -%}
