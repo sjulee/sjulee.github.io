@@ -10,5 +10,5 @@ permalink: /demo/
 
 # Python Demo
 
-<a href="logistic_regression_demo.ipynb">Download code (Jupyter Notebook)</a>
+<a href="logistic_regression_demo.ipynb">Download code (Jupyter Notebook)</a>\
 <a href="data_pct_diff.csv">Download dataset</a>
