@@ -2,6 +2,7 @@
 layout: page
 title: Logistic Regression
 permalink: /demo/
+exclude: true
 ---
 
 # Logistic Regression Slides
