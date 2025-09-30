@@ -1,78 +1,65 @@
 ---
-layout: base
+layout: default
 ---
- <head>
 
-    <style>
-    {
-        box-sizing: border-box;
-    }
-    /* Set additional styling options for the columns*/
-    .columnleft {
-    float: left;
-    width: 30%;
-    }
-
-    .columnright {
-    float: right;
-    width: 65%;
-    margin-left: 5%;
-    }
-
-    .left {
-      width: 25%;
-    }
-
-    .right {
-      width: 75%;
-    }
-
-    .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-
-    @media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-      }
-    }
-    </style>
-
- </head>
 <div class="home">
-  <div class="row">
-    <div class="columnleft">
-      <img src="/../images/sunjuleewebsize-3636.jpeg" alt="Sun Ju Lee">
-    </div>
-    <div class="columnright">
-      {%- if page.title -%}
-        <h1 class="page-heading">{{ page.title }}</h1>
-      {%- endif -%}
 
-      {{ content }}
+  {{ content }}
 
-      {%- if site.posts.size > 0 -%}
-        <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-        <ul class="post-list">
-          {%- for post in site.posts -%}
-          <li>
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
+  {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+  {%- if posts.size > 0 -%}
+    <ul class="post-list">
+      {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts -%}
+      <li>
+        <h2>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h2>
+        <p class="post-meta">
+          <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ post.date | date: date_format }}
+          </time>
+          {%- if jekyll.environment == "production" and site.disqus -%}
+            • <a href="{{ post.url | relative_url }}#disqus_thread">
+                <span class="disqus-comment-count" data-disqus-url="{{ post.url | absolute_url }}"></span>
               </a>
-            </h3>
-            {%- if site.show_excerpts -%}
-              {{ post.excerpt }}
-            {%- endif -%}
-          </li>
-          {%- endfor -%}
-        </ul>
+          {%- endif -%}
+        </p>
+        {%- if post.show_excerpts != false -%}
+          <div class="post-excerpt">{{ post.excerpt | strip_html }}</div>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
 
-        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-      {%- endif -%}
-    <div>
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+
+  {%- endif -%}
+  
+  {%- if jekyll.environment == "production" and site.disqus -%}
+    <script id="dsq-count-scr" src="//{{ site.disqus }}.disqus.com/count.js" async></script>
+  {%- endif -%}
 </div>

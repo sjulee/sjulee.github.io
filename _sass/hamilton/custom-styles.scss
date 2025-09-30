@@ -1,0 +1,163 @@
+// Placeholder to allow customizing styles.
+.feed-subscribe {
+  display: none !important;
+}
+
+.site-header {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.site-sidebar {
+  border-right: none !important;
+  border-bottom: none !important;
+  text-align: center;
+}
+
+.site-sidebar ul,
+.site-sidebar li,
+.site-sidebar a {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  //display: block;
+}
+
+.sidebar-section {
+  border-bottom: none !important;
+}
+
+/**
+ * Site body
+ */
+.site-body {
+  display: grid;
+  grid-template-columns: calc(#{$content-width} * 0.35) 1fr;
+  overflow: hidden;
+
+  @include media-query($on-medium) {
+    grid-template-columns: calc(#{$content-width} * 0.35) 1fr;
+  }
+
+  @include media-query($on-small) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr; // Ensures stacking
+  }
+}
+
+.author-avatar {
+  width: $base-font-size * 12; // increase multiplier as needed
+  height: auto;
+}
+
+ul.contact-list li {
+  // color: #0074d9;
+  //font-weight: bold;
+  font-size: $base-font-size * 1.1;
+}
+
+a {
+  color: #0C485E !important;
+}
+
+@media screen and (max-width: 600px) { // or use your $on-small value
+  .site-main,
+  .post-content {
+    font-size: 1.2em !important; // or 16px, 1.2em, etc.
+    line-height: 1.7;
+  }
+  .site-sidebar {
+    width: 70vw !important;      // or use px, e.g. 300px
+    max-width: 350px !important; // optional, for a max size
+    min-width: 200px;            // optional, for a min size
+    margin: 0 auto;              // center the sidebar
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+  }
+  .author-avatar {
+    width: 175px;   // or a smaller value
+    height: auto;
+  }
+  .sidebar-section {
+    margin-bottom: 0.15em;
+    padding-bottom: 0.15em;
+  }
+}
+
+.site-nav .current-page {
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+.tab-main {
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
+  max-width: 800px; // or your preferred width
+  //min-width: 800px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $spacing-unit;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 900px) {
+  .tab-main {
+    padding-left: $spacing-unit / 2;
+    padding-right: $spacing-unit / 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tab-main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+h1,
+.post-content h1 {
+  font-size: 1.5em !important; // Adjust to your preferred size (e.g., 1.5em, 2em, 28px)
+  line-height: 1.2;
+}
+
+h2,
+.post-content h2 {
+  font-size: 1.25em !important; // Adjust to your preferred size (e.g., 1.5em, 2em, 28px)
+  line-height: 1.2;
+}
+
+h3,
+.post-content h3,
+.tab-main h3 {
+  font-weight: normal !important;
+  margin-bottom: 0.5em; // or try 0.25em for even less space
+}
+
+.tab-main,
+.post-content,
+.site-main,
+.tab-main * {
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  white-space: normal !important;
+  hyphens: none !important;
+  text-align: left !important;
+}
+
+.home,
+.home > div,
+.home * {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  white-space: normal !important;
+  hyphens: none !important;
+  text-align: left !important;
+}
+
+//.site-footer {
+//  border-top: none !important;
+//  border-bottom: none !important;
+//}
