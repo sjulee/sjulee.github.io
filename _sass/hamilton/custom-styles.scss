@@ -32,11 +32,11 @@
  */
 .site-body {
   display: grid;
-  grid-template-columns: calc(#{$content-width} * 0.35) 1fr;
-  overflow: hidden;
+  grid-template-columns: calc(#{$content-width} * 0.25) 1fr;
+  //overflow: hidden;
 
   @include media-query($on-medium) {
-    grid-template-columns: calc(#{$content-width} * 0.35) 1fr;
+    grid-template-columns: calc(#{$content-width} * 0.25) 1fr;
   }
 
   @include media-query($on-small) {
@@ -66,10 +66,20 @@ a {
     font-size: 1.2em !important; // or 16px, 1.2em, etc.
     line-height: 1.7;
   }
+
+  .site-body {
+    display: block !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    align-items: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
   .site-sidebar {
-    width: 70vw !important;      // or use px, e.g. 300px
-    max-width: 350px !important; // optional, for a max size
-    min-width: 200px;            // optional, for a min size
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;           // optional, for a min size
     margin: 0 auto;              // center the sidebar
     box-sizing: border-box;
     padding-left: 1em;
@@ -107,13 +117,6 @@ a {
   .tab-main {
     padding-left: $spacing-unit / 2;
     padding-right: $spacing-unit / 2;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .tab-main {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -155,6 +158,31 @@ h3,
   white-space: normal !important;
   hyphens: none !important;
   text-align: left !important;
+}
+
+html, body {
+  height: auto !important;
+  min-height: 100% !important;
+  overflow-y: auto !important;
+}
+
+.site-container,
+.wrapper {
+  height: auto !important;
+  min-height: 100% !important;
+  overflow: visible !important;
+}
+
+.site-body {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+.fa-user,
+.fas.fa-user,
+.site-nav-toggle {
+  display: none !important;
 }
 
 //.site-footer {
