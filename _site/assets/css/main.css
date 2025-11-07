@@ -1001,6 +1001,14 @@ figcaption.align-center {
 ul.contact-list li {
   font-size: 19.8px; }
 
+.site-sidebar .contact-list a[href^="mailto:"] {
+  font-size: 0.75em !important;
+  /* adjust to taste, or use px (e.g. 13px) */
+  line-height: 1.25;
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere; }
+
 a {
   color: #0C485E !important; }
 
